@@ -1,0 +1,88 @@
+.content1 {
+    margin:5%;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    overflow: hidden;
+    gap:15px;
+}
+
+#beginning {
+    margin: 0% 5% 25% 5%;
+    width:60vw;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    flex-wrap:nowrap;
+    flex-shrink: 1;
+}
+
+#intro {
+    display: inline-block;
+    font-family: 'Sunflower', sans-serif;
+    max-height: 20vh;
+}
+
+.typed {
+    font-size: 5vw;;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    
+    animation: typing 1.5s steps(20, end) forwards, blinking 0.2s infinite alternate;
+    border-right: 2px solid;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blinking {
+    0% {border-right-color: transparent}
+    50% {border-right-color: black}
+    100% {border-right-color: transparent}
+}
+
+.description {
+    display:block;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(25, 168, 212, 0.5);
+    border: 2px solid turquoise;
+    border-radius: 5px 15px;
+}
+
+#img {
+    flex-shrink:0;
+    width:40vw;
+}
+#img1 img{
+    width: 90%;
+    margin-left:  10%;
+}
+
+.learnM {
+    color:#069; 
+    cursor:pointer;
+}
+.lorePrev {
+    display:none;
+    position:absolute;
+    border:1px solid #000;
+    width:400px;
+    height:400px;
+}
+
+.learnM:hover + .lorePrev {
+    display: block;
+}
+
+.parent-container:hover .lorePrev {
+    display: block;
+}
+
+.lorePrev {
+    /* other styles */
+    display: none;
+}

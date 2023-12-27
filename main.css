@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .about{
     display: flex; /* Makes the div a flex container */
     flex-direction: column; /* Arrange children in a column */
@@ -5,10 +9,20 @@
     align-items: center; /* Centers the div vertically */
 }
 
-h1 {
+.about h1 {
     font-family: 'Cinzel Decorative', serif;   
 }
 
 #learnMore{
     font-family: serif;
 }
+
+#bg1{
+    background: linear-gradient(0deg, rgb(34, 30, 36), #349dcd77), url("Assets/VerticalNeon.svg");
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+
+    padding: 5vh;
+}
+
