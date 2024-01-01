@@ -1,21 +1,26 @@
-// var typed = document.querySelector(".typed");
-    
-// // Define an array of words to cycle through
-// var words = ["World", "CSS", "Animation", "JavaScript"];
+document.addEventListener('DOMContentLoaded', function () {
+  const textList = ["Greetings!","Visitor!","From","John","Michael", "Iwag", "Welcome!", "To My", "Page!", "Enjoy!"];
+  const typingElement = document.querySelector('.typed');
+  let index = 0;
 
-// // Define a variable to keep track of the current index
-// var index = 0;
+  function updateText() {
+    typingElement.textContent = textList[index];
+    index++; 
+    console.log(index);
 
-// // Add an event listener for the animationend event
-// typed.addEventListener("animationend", function() {
-//   // Increment the index by one
-//   index++;
-  
-//   // If the index is equal to the length of the array, reset it to zero
-//   if (index == words.length) {
-//     index = 0;
-//   }
-  
-//   // Change the text content of the div element to the next word
-//   typed.textContent = words[index];
-// });
+    if (index === 10) {
+      clearInterval(intervalId);
+    }
+  }
+
+  function checkWidth() {
+    const currentWidth = parseFloat(getComputedStyle(typingElement).width);
+
+    if (currentWidth < 10) {
+      updateText();
+    }
+  }
+
+  const intervalId = setInterval(checkWidth, 100);
+  updateText();
+});

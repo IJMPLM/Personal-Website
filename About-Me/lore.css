@@ -1,4 +1,4 @@
-#horoscope {
+.birthMarks {
 position: absolute;
     top: 0;
     left: 0;
@@ -9,4 +9,37 @@ position: absolute;
     /*style above used to cover the entire page*/
     background-image: linear-gradient(rgba(0,0,0),70%,rgba(29,22,30),90%,rgba(43,29,90),98%,rgba(40,43,117),99.5%,rgba(162,150,202));
     /*night sky gradient*/
+
+
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+}
+
+#horoscope{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+}
+
+#horoscope p,h1{
+    color:white;
+}
+
+#scorpLogo img{
+    max-width: 700px;
+}
+
+#birthStone{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    align-items: center;
+}
+
+#birthStone p,h1{
+    color:white;
 }

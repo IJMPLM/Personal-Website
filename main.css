@@ -25,4 +25,13 @@ body {
 
     padding: 5vh;
 }
+#bg2{
+    background: linear-gradient(0deg, rgb(34, 30, 36), #349dcd77), url("Assets/VerticalNeonInverted.svg");
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+
+    padding: 5vh;
+}
+
 

@@ -18,18 +18,26 @@
 }
 
 #intro {
-    display: inline-block;
+    display: block;
     font-family: 'Sunflower', sans-serif;
+    width:100%;
     max-height: 20vh;
+    flex-basis: 60%;
+}
+
+.typed-wrapper {
+    display:block;
+    width:800px;
+    padding:100px;
 }
 
 .typed {
-    font-size: 5vw;;
+    display:block;
+    font-size: 80px;
     overflow: hidden;
     white-space: nowrap;
-    width: 0;
-    
-    animation: typing 1.5s steps(20, end) forwards, blinking 0.2s infinite alternate;
+
+    animation: typing 1s steps(20, end) alternate 19 2s, blinking 0.2s 100 2s;
     border-right: 2px solid;
 }
 
@@ -41,7 +49,7 @@
 @keyframes blinking {
     0% {border-right-color: transparent}
     50% {border-right-color: black}
-    100% {border-right-color: transparent}
+    100% {border-right-color: transparent} 
 }
 
 .description {
@@ -55,7 +63,8 @@
 
 #img {
     flex-shrink:0;
-    width:40vw;
+    width:35vw;
+    max-width:300px;
 }
 #img1 img{
     width: 90%;
@@ -85,4 +94,36 @@
 .lorePrev {
     /* other styles */
     display: none;
+}
+
+#dividerBlack {
+    background: linear-gradient(0deg, rgba(34, 30, 36,0.7), #000000,rgb(34, 30, 36));  
+    overflow: hidden;
+}
+
+#dividerBlack h1{
+    text-align:center;
+    color:white;
+}
+#dividerBlack p{
+    text-align:center;
+    color:white;
+}
+
+
+#bg2 {
+    height:100%;
+}
+
+#completion {
+    display:flex;
+    flex-direction: row;
+    gap: 10vw;
+    flex-wrap:nowrap;
+    justify-content: center;
+}
+
+#completion div{
+    width:300px;
+    height:200px;
 }
