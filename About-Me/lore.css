@@ -4,10 +4,10 @@ position: absolute;
     left: 0;
     bottom: 0;
     right: 0;
-    height: 100%;
+    height: 5000px;
     width: 100%;
     /*style above used to cover the entire page*/
-    background-image: linear-gradient(rgba(0,0,0),70%,rgba(29,22,30),90%,rgba(43,29,90),98%,rgba(40,43,117),99.5%,rgba(162,150,202));
+    background-image: linear-gradient(rgba(0,0,0),30%,rgba(29,22,30),50%,rgba(43,29,90),58%,rgba(40,43,117),59.5%,rgba(162,150,202));
     /*night sky gradient*/
 
 
@@ -42,4 +42,14 @@ position: absolute;
 
 #birthStone p,h1{
     color:white;
+}
+
+#topaz img{
+    max-width: 500px;
+}
+
+@media (max-width: 800px) {
+    #horoscope,#birthStone {
+      flex-direction: column;
+    }
 }
