@@ -162,3 +162,19 @@ position: relative;
 
     overflow: hidden;
 }
+
+@media (max-width: 800px) {
+    #horoscope, #birthStone, #birthFlower, #blood {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #topazLogo{
+        order:0;
+    }
+    .birthMarks p, h1{
+        text-align: center;
+    }
+    .birthMarks {
+        background: linear-gradient(180deg, rgba(0,0,0,1) 36%, rgba(27,31,99,1) 46%, rgba(116,99,31,1) 56%, rgba(120,232,255,1) 97%, rgba(255,255,255,1) 100%);
+    }
+}

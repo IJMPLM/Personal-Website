@@ -1,45 +1,98 @@
+.overlay {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(217,75,216,0.8); 
+    color: white;
+    text-align:center;
+    font-size: 24px;
+    line-height: 8vh;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s, transform 0.3s ease;
+  }
+
+  #description:hover .overlay {
+    opacity: 1;
+    transform: translateY(0%);
+    cursor: pointer;
+  }
+
+.overlay h1{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 3rem;;
+}
+
 .content1 {
     margin:5%;
     display:flex;
     flex-direction:row;
     align-items: center;
-    overflow: hidden;
-    gap:15px;
+    gap:3rem;
 }
 
 #beginning {
-    margin: 0% 5% 25% 5%;
     width:60vw;
     display:flex;
     flex-direction: column;
     align-items:flex-start;
     flex-wrap:nowrap;
-    flex-shrink: 1;
+    order:0;
 }
 
 #intro {
     display: block;
-    font-family: 'Sunflower', sans-serif;
     width:100%;
-    max-height: 20vh;
-    flex-basis: 60%;
 }
 
-.typed-wrapper {
-    display:block;
-    width:800px;
-    padding:100px;
+#description {
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    background-color:   rgba(126,58,199,0.2);
+    border: 2px solid rgb(194,176,248);
+    border-radius: 5px 15px;
+}
+
+#description p{    
+    font-family: 'Sunflower', sans-serif;
+    color: #BEC2F0;
+    text-shadow: 1px 0 0.5px rgb(194,176,248), -1px 0 0.5px rgb(194,176,248), 0 1px 0.5px rgb(194,176,248), 0 -1px 0.5px rgb(194,176,248) ;
+    font-size: 2rem;
+    margin:1rem;
+}
+
+#img1 {
+    flex-shrink:0;
+    width:35vw;
+    order:1;
+}
+
+#img1 img{
+    width: 100%;
+    border-radius: 75px 25px;
 }
 
 .typed {
+    margin:0 0 1rem 0;
+    padding-left: 1rem;
     display:block;
-    font-size: 80px;
+    font-size: 10rem;
+    font-family: 'Sunflower', sans-serif;
     overflow: hidden;
     white-space: nowrap;
 
+
+    color: #BEC2F0;
+    text-shadow: 1px 0 3px rgb(194,176,248), -1px 0 3px rgb(194,176,248), 0 1px 3px rgb(194,176,248), 0 -1px 3px rgb(194,176,248) ;
+
     animation: typing 1s steps(20, end) alternate 19 2s, blinking 0.2s 100 2s;
-    border-right: 2px solid;
+    border-right: 2px solid rgb(194,176,248);
 }
+
 
 @keyframes typing {
     from { width: 0 }
@@ -48,82 +101,121 @@
 
 @keyframes blinking {
     0% {border-right-color: transparent}
-    50% {border-right-color: black}
+    50% {border-right-color: #d94bd8}
     100% {border-right-color: transparent} 
 }
 
-.description {
-    display:block;
-    width: 100%;
-    height: 40%;
-    background-color: rgba(25, 168, 212, 0.5);
-    border: 2px solid turquoise;
-    border-radius: 5px 15px;
-}
-
-#img {
-    flex-shrink:0;
-    width:35vw;
-    max-width:300px;
-}
-#img1 img{
-    width: 90%;
-    margin-left:  10%;
-}
-
-.learnM {
-    color:#069; 
-    cursor:pointer;
-}
-.lorePrev {
-    display:none;
-    position:absolute;
-    border:1px solid #000;
-    width:400px;
-    height:400px;
-}
-
-.learnM:hover + .lorePrev {
-    display: block;
-}
-
-.parent-container:hover .lorePrev {
-    display: block;
-}
-
-.lorePrev {
-    /* other styles */
-    display: none;
-}
-
-#dividerBlack {
-    background: linear-gradient(0deg, rgba(34, 30, 36,0.7), #000000,rgb(34, 30, 36));  
-    overflow: hidden;
-}
-
 #dividerBlack h1{
+    font-size: 10rem;
+    font-family: 'Cinzel Decorative', serif;   
     text-align:center;
     color:white;
+
+    margin: 5rem 0 2rem 0;
 }
 #dividerBlack p{
+    font-size: 2rem;
+    font-family: 'Sunflower', sans-serif;
+
     text-align:center;
     color:white;
-}
 
-
-#bg2 {
-    height:100%;
+    margin: 0 20% 5% 20%;
 }
 
 #completion {
     display:flex;
     flex-direction: row;
-    gap: 10vw;
+    gap: 3rem;
     flex-wrap:nowrap;
     justify-content: center;
 }
 
-#completion div{
-    width:300px;
-    height:200px;
+#completion div {
+    transition: background-color 0.3s ease;
+}
+
+.schoolToggle:hover {
+    cursor: pointer;
+    background-color: #d94bd8;
+}
+
+.schoolToggle.active {
+    outline: 0.2rem solid rgb(194,176,248);
+    border-radius: 3px;
+    position:relative;
+}
+
+.schoolToggle.active::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Adjust as needed */
+    left: -5px; /* Adjust as needed */
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(194, 176, 248, 0.7); /* Initial glow color and size */
+    border-radius: inherit;
+    animation: spinGlow 2s linear infinite;
+}
+
+@keyframes spinGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#stas, #pshs, #plm {
+    display: flex;
+    flex-direction: column;
+    width:22rem;
+    height:28rem;
+    padding:2rem;
+}
+
+#stas img, #pshs img, #plm img{
+    width:100%;
+}
+
+#stas h1, #pshs h1, #plm h1{
+    font-size: 3rem;
+    font-family: 'Sunflower', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    margin:1rem;
+}
+
+
+
+@media (max-width: 800px) {
+    .content1 {
+        margin:0;
+        flex-direction: column;
+        justify-content: center;
+        gap:1rem;
+    }
+    #beginning {
+        order: 2;
+    }
+    .typed {
+        margin:0 0 1rem 0;
+        font-size:5rem;
+    }
+    #description p{
+        font-size: 1.5rem;
+    }
+    #img1 {
+        min-width: 80%;
+    }
+    .overlay {
+        position:relative;
+        opacity:1;  
+        transition:none;
+        transform: none;
+    }
+    #dividerBlack h1{
+        font-size: 7rem;
+    }
 }

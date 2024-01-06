@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>JM-Iwag</title>        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
@@ -21,15 +22,20 @@
                             <h1 class="typed"></h1>
                         </div>
                     </div>
-                    <div class="description">
+                    <div id="description">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id nibh tortor id aliquet lectus proin nibh nisl condimentum. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Nunc sed velit dignissim sodales. In nisl nisi scelerisque eu ultrices. In fermentum posuere urna nec tincidunt. At ultrices mi tempus imperdiet. Tristique magna sit amet purus gravida quis blandit. Fermentum iaculis eu non diam phasellus vestibulum. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Enim facilisis gravida neque convallis.
+                            This is the Personal-Website of John Michael M. Iwag, the person shown in the picture, created this as a mark of his 
+                            journey towards learning different technologies, beginning his first steps with static web development. He honestly
+                            thought of considering this as his base site for his portfolio, however, just as how he struggled to make the animated 
+                            text above, he also spent a lot of time thinking of the things he could possibly put here instead of learning how he
+                            will put it here, so instead of pretending he learned a lot in a short period of time, he just decided to justify
+                            the fun he went through in trying to put up this webpage, and by fun, it is not about him continuously referring to himself
+                            in third-person but fun through pointing out how he can confidently say that he knows everything about the structure of this
+                            webpage after building it from scratch and of course, he also left some means for him to be contacted for your opinions.
+                            Click to learn more.
                         </p>
+                        <div class="overlay" onclick="toLore()"><h1>Learn More About Me!</h1></div>
                     </div>
-                    <a class="learnM" href="About-Me/lore.html">
-                        Learn more about me
-                    </a>
-                    <iframe class="lorePrev" src="About-Me/lore.html"></iframe>
                 </div>
                 <div id="img1">
                     <img src="Assets/CreativeShot.svg">
@@ -38,28 +44,33 @@
         </div>
         <div id="dividerBlack">
             <h1>EDUCATION</h1>
-            <p>Paliwanag mo tungkol saan yang education section</p>
+            <p>This section contains the academic background and experiences of John Michael Iwag beginning
+                from his elementary education up to his current academic status.
+            </p>
         </div>
         <div id="bg2">
             <div class="education">
                 <div id="completion">
-                    <div>Elementary
-                        School Logo goes here 
-                        reveal blog preview upon hover
-                        entire section leads to article when clicked
-                        add glow animation or smthn
+                    <div class="schoolToggle" id="stas" onclick="toggleActive(this)">
+                        <h1>ELEMENTARY</h1>
+                        <div id="stasLogo"><img src=Assets/STAS.svg></div>
+                        <div class="schoolInfo">
+                            <h1>School Info 1 here</h1>
+                        </div>
                     </div>
-                    <div>High School
-                        School Logo goes here 
-                        reveal blog preview upon hover
-                        entire section leads to article when clicked
-                        add glow animation or smthn
+                    <div class="schoolToggle"  id="pshs" onclick="toggleActive(this)">
+                        <h1>HIGH SCHOOL</h1>
+                        <div id="pshsLogo"><img src=Assets/PSHS.svg></div>
+                        <div class="schoolInfo">
+                            <h1>School Info 2 here</h1>
+                        </div>
                     </div>
-                    <div>College
-                        School Logo goes here 
-                        reveal blog preview upon hover
-                        entire section leads to article when clicked
-                        add glow animation or smthn
+                    <div class="schoolToggle" id="plm" onclick="toggleActive(this)">
+                        <h1>COLLEGE</h1>
+                        <div id="plmLogo"><img src=Assets/PLM.svg></div>
+                        <div class="schoolInfo">
+                            <h1>School Info 3 here</h1>
+                        </div>
                     </div>
                 </div>
             </div>
