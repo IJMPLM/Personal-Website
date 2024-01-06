@@ -15,11 +15,11 @@
     transition: opacity 0.3s, transform 0.3s ease;
   }
 
-  #description:hover .overlay {
+#description:hover .overlay {
     opacity: 1;
     transform: translateY(0%);
     cursor: pointer;
-  }
+}
 
 .overlay h1{
     font-family: 'Sunflower', sans-serif;
@@ -27,30 +27,36 @@
 }
 
 .content1 {
-    margin:5%;
     display:flex;
     flex-direction:row;
     align-items: center;
-    gap:3rem;
+    gap:2%;
 }
 
 #beginning {
-    width:60vw;
+    flex:1;
+
+    width:100%;
     display:flex;
     flex-direction: column;
-    align-items:flex-start;
     flex-wrap:nowrap;
     order:0;
 }
 
-#intro {
-    display: block;
-    width:100%;
+#img1 {
+    flex:1;
+    order:1;
+}
+
+#img1 img{
+    width: 100%;
+    border-radius: 75px 25px;
 }
 
 #description {
-    position:relative;
-    overflow: hidden;
+    position:relative; /*for overlay*/
+    overflow: hidden; /*for overlay*/
+
     width: 100%;
     background-color:   rgba(126,58,199,0.2);
     border: 2px solid rgb(194,176,248);
@@ -61,26 +67,14 @@
     font-family: 'Sunflower', sans-serif;
     color: #BEC2F0;
     text-shadow: 1px 0 0.5px rgb(194,176,248), -1px 0 0.5px rgb(194,176,248), 0 1px 0.5px rgb(194,176,248), 0 -1px 0.5px rgb(194,176,248) ;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin:1rem;
 }
 
-#img1 {
-    flex-shrink:0;
-    width:35vw;
-    order:1;
-}
-
-#img1 img{
-    width: 100%;
-    border-radius: 75px 25px;
-}
-
 .typed {
-    margin:0 0 1rem 0;
+    margin:0 0 0.5rem 0;
     padding-left: 1rem;
-    display:block;
-    font-size: 10rem;
+    font-size: 8rem;
     font-family: 'Sunflower', sans-serif;
     overflow: hidden;
     white-space: nowrap;
@@ -93,7 +87,6 @@
     border-right: 2px solid rgb(194,176,248);
 }
 
-
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -105,22 +98,21 @@
     100% {border-right-color: transparent} 
 }
 
-#dividerBlack h1{
-    font-size: 10rem;
+.dividerBlack h1{
+    font-size: 11rem;
     font-family: 'Cinzel Decorative', serif;   
     text-align:center;
     color:white;
 
-    margin: 5rem 0 2rem 0;
+    margin: 5% 0 1% 0;
 }
-#dividerBlack p{
+.dividerBlack p{
     font-size: 2rem;
     font-family: 'Sunflower', sans-serif;
 
     text-align:center;
     color:white;
-
-    margin: 0 20% 5% 20%;
+    margin: 0 13vw 5% 13vw;
 }
 
 #completion {
@@ -187,35 +179,77 @@
     margin:1rem;
 }
 
+@media (max-width: 1536px){
+    html {
+        font-size: 16px;
+    }
+}
 
+@media (max-width: 1280px){
+    html {
+        font-size: 13px;
+    }
+}
 
-@media (max-width: 800px) {
+@media (max-width: 1024px){
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px){
     .content1 {
-        margin:0;
         flex-direction: column;
-        justify-content: center;
-        gap:1rem;
     }
-    #beginning {
-        order: 2;
+    #img1{
+        order:-1;
+        margin-bottom: 4%;
     }
-    .typed {
-        margin:0 0 1rem 0;
-        font-size:5rem;
+    html {
+        font-size: 15px;
     }
-    #description p{
-        font-size: 1.5rem;
+    .dividerBlack h1 {
+        font-size:6rem;
     }
-    #img1 {
-        min-width: 80%;
+    .dividerBlack p {
+        font-size:1.5rem;
     }
-    .overlay {
-        position:relative;
-        opacity:1;  
-        transition:none;
-        transform: none;
+}
+
+@media (max-width: 640px){
+    .content1 {
+        flex-direction: column;
     }
-    #dividerBlack h1{
-        font-size: 7rem;
+    #img1{
+        order:-1;
+        margin-bottom: 4%;
+    }
+    html {
+        font-size: 15px;
+    }
+    .dividerBlack h1 {
+        font-size:4rem;
+    }
+    .dividerBlack p {
+        font-size:1rem;
+    }
+}
+
+@media (max-width: 475px){
+    .content1 {
+        flex-direction: column;
+    }
+    #img1{
+        order:-1;
+        margin-bottom: 4%;
+    }
+    html {
+        font-size: 13px;
+    }
+    .dividerBlack h1 {
+        font-size:4rem;
+    }
+    .dividerBlack p {
+        font-size:1rem;
     }
 }

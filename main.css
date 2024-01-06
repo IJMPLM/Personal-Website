@@ -30,12 +30,15 @@ body {
     padding: 5vh 5vh 10rem 5vh;
 }
 
-#dividerBlack {
+#bg2{
     overflow: visible;
     background: linear-gradient(180deg, rgba(81,74,128,0) 3%, rgba(73,74,136,1) 6%, rgba(0,0,0,1) 15%);
-    margin: -10% 0 0 0;
-    padding: 2% 0 2% 0;
+    margin: -5% 0 0 0;
+    padding: 5% 0 2% 0;
     z-index: 1;
+}
+#bg3{
+    background-color: black;
 }
 
 
@@ -49,7 +52,7 @@ body {
     padding: 10rem 5vh 5vh 5vh;
 } reserved effect*/
 
-#bg2{
+#bg4{
     background-color: black;
     z-index: 2;
     height:50rem;
