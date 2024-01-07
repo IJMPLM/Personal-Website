@@ -218,3 +218,21 @@ body{
         width:15%;
     }
 }
+
+@media (max-width: 390px){
+    .container{
+        padding: 0 10% 0 10%;
+    }
+    .navBar a{
+        font-size: 1rem;
+    }
+    #birthMarks h1{
+        font-size: 3rem;
+    }
+    #birthDetails h1{
+        font-size: 6rem;
+    }
+    #map {
+        width: 95%;
+    }
+}

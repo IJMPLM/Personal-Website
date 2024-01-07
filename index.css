@@ -386,3 +386,18 @@ body {
         width:15%;
     }
 }
+
+@media (max-width: 390px){
+    #completion {
+        width: 380px;
+    }
+    #stas, #pshs, #plm{
+        padding:1rem;
+    }
+    #stas h1, #pshs h1, #plm h1{
+        font-size: 0.7rem   ;
+    }
+    .navBar a{
+        font-size: 1rem;
+    }
+}
