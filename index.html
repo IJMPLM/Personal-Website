@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JM-Iwag</title>        
+        <title>JM-Iwag</title>   
+        <meta charset="UTF-8">     
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,14 @@
         <link rel="stylesheet" href="containerPreset1.css">
     </head>
     <body>
+        <header class="navBar">
+            <nav>
+                <a href="#bg1">Home</a>
+                <a href="/About-Me/lore.html">Lore</a>
+                <a href="#bg2">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>        
+        </header>
         <main>
             <div id="bg1">
                 <section class="container content1">
@@ -77,31 +86,244 @@
                             </div>
                         </div>
                     </div>
+                    <div id="infos">
+                        <div id="stasInfo" class="schoolInfo">
+                            <div class="headerInfo">
+                                <div class="about infoToggle" onclick="toggleActive2(this)">
+                                    <h1>ABOUT</h1>
+                                </div>
+                                <div class="TIMELINE infoToggle" onclick="toggleActive2(this)">
+                                    <h1>TIMELINE</h1>
+                                </div>
+                                <div class="achievements infoToggle" onclick="toggleActive2(this)">
+                                    <h1>ACHIEVEMENTS</h1>
+                                </div>
+                                <div class="misc infoToggle" onclick="toggleActive2(this)">
+                                    <h1>REMARKS</h1>
+                                </div>
+                            </div>
+                            <div class="contentInfo">
+                                <div class="about">
+                                    <h1>
+                                        St. Theresa De Avila School <br>
+                                    </h1>
+                                    <h2>
+                                        F287+Q45, Lopez, San Isidro, Parañaque, 1700 Metro Manila <br>
+                                    </h2>
+                                    <p>
+                                        A private elementary and high school institution built around the beliefs 
+                                        and in honor of St. Theresa of Avila. It is a spacious school with a decent
+                                        sized campus with its own open-grounds inside gates that are well-guarded. 
+                                        Unfortunately, it had to be closed due to conflicts of interest along the
+                                        management and stakeholders, particularly with the last president of the school
+                                        Mr. Robert Pascual.
+                                    </p>
+                                    <img src="../Assets/StTheresaDeAvila.svg">
+                                </div>
+                                <div class="TIMELINE">
+                                    <h1>
+                                        2011-2017 <br>
+                                    </h1>
+                                    <p>
+                                        John Michael M. Iwag spent his entire elementary education in this school where
+                                        he honed his fundamental understanding and grasping of several subjects. Time spent
+                                        in this place is mostly insignificant for him due to it being a venue for general
+                                        irrelevant knowledge which he only accepted out of discipline and respect towards his
+                                        parents, with little concern to what he is actually learning and for what it is.
+                                        But despite of that he still had his own moments.
+                                    </p>
+                                    <img src="../Gallery/STAS/singingM_1.jpg">
+                                    <figcaption> An image of John Michael Iwag singing for Teacher's Day </figcaption>
+                                    <img src="../Gallery/STAS/drummingM_1.jpg">
+                                    <figcaption> An image of John Michael Iwag before their Drum and Lyre Competition </figcaption>
+                                </div>
+                                <div class="achievements">
+                                    <h1>Consistent Honor Student</h1> <br>
+                                    <p>
+                                        John Michael Iwag at a young age has been taught well with the supervision
+                                        of his mother who was once a teacher herself. He still had to his part in studying
+                                        and reviewing for his exams but given how present his parents are in enforcing good
+                                        study habits to him, he attributes most of his elementary success to them.
+                                    </p> 
+                                    <img src="../Gallery/STAS/medals_1.jpg">
+                                    <img src="../Gallery/STAS/medals_2.jpg">
+                                    <img src="../Gallery/STAS/graduationWalk_1.jpg">
+                                    <img src="../Gallery/STAS/graduationWalk_2.jpg">
+                                </div>
+                                <div class="misc">
+                                    <h1>Important Glimpse of Time</h1> <br>
+                                    <p>
+                                        Apart from being young at that age, John Michael Iwag really find this period of 
+                                        time either unmemorable or filled of trauma to be deserving of being forgotten. 
+                                        But it is no different from every other past experience he has had even later in life
+                                        and there are still people and events he can recall from this time but most of them will
+                                        probably not come back on their own without being brought up again by someone else. Regardless,
+                                        this time period is filled of rigorous book-based studying for John Michael Iwag which created 
+                                        a strong knowledge foundation for him.  
+                                    </p>
+                                    <img src="../Gallery/STAS/ID_2.jpg">
+                                    <img src="../Gallery/STAS/ID_1.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pshsInfo" class="schoolInfo">
+                            <div class="headerInfo">
+                                <div class="about infoToggle" onclick="toggleActive2(this)">
+                                    <h1>ABOUT</h1>
+                                </div>
+                                <div class="TIMELINE infoToggle" onclick="toggleActive2(this)">
+                                    <h1>TIMELINE</h1>
+                                </div>
+                                <div class="achievements infoToggle" onclick="toggleActive2(this)">
+                                    <h1>ACHIEVEMENTS</h1>
+                                </div>
+                                <div class="misc infoToggle" onclick="toggleActive2(this)">
+                                    <h1>REMARKS</h1>
+                                </div>
+                            </div>
+                            <div class="contentInfo">
+                                <div class="about">
+                                    <h1>Parañaque Science High School</h1>
+                                    <h2>8322 Sampaguita Street 1704 Paranaque Metro Manila </h2>
+                                    <p>
+                                        Parañaque Science High School (PSHS) was concerned in 1988 by the late Mayor Walfrido N. Ferrer and his 
+                                        sister Mrs. Flor Cordero. It envisioned to provide free quality secondary education to the exceptionally 
+                                        bright elementary graduates of Parañaque, by having an enriched curriculum in Science, Engineering, Technology 
+                                        and Mathematics. The idea of establishing a science high school was made after the success of Parañaque Municipal 
+                                        High School (PMHS) students in the 1988 Regional Science Fair. <br>
+                                        Their vision was referred to the Principal of 
+                                        Parañaque Municipal High School (now Parañaque National High School) Mrs. Rosa V. Sioson, with other school 
+                                        administrator: Miss Narcisa F. Catindig, Assistant Principal and Department Head of Mathematics; Mrs. Teresita Flores, 
+                                        Department Head of English; and Mrs. Elizabeth C. Cabales, Department Head of Science. This was approved by the 
+                                        Division Superintendent, Dr. Ricardo Sibug and the OIC Science Supervisor, Mr. Lino Rom, who signified their support 
+                                        to the notion. Their collaboration marked the birth of PSHS in 1990. With twenty-one (21) students housed in a borrowred 
+                                        classroom of PMHS, and teachers, supervised by the PMHS administrators, PSHS has proven its exceptionality.
+                                    </p>
+                                    <img src="../Gallery/PSHS/school_1.jpg">
+                                    <figcaption>An Image of the School's Facade</figcaption>
+                                    <img src="../Gallery/PSHS/school_2.jpg">
+                                    <figcaption>An Image of the School's Facade at Night</figcaption>
+                                    <img src="../Gallery/PSHS/school_4.jpg">
+                                    <figcaption>An Image of the School's Facade at Night</figcaption>
+                                    <img src="../Gallery/PSHS/school_3.jpg">
+                                    <figcaption>An Image of the Campus (PUP Parañaque on left) at Night</figcaption>
+                                </div>
+                                <div class="TIMELINE">
+                                    <h1>2017-2023</h1>
+                                    <p>
+                                        John Michael Iwag spent most of his growth in this safe space for what was deemed as advance learning. Despite of beginning
+                                        his academic venture with a lost note and some reluctance to even take an entrance exam in this school, it is one of the decisions
+                                        he will never regret later in life not only for the quality education served from this institution, but also for the people he met and 
+                                        taught him several things in life that led to what he is now.
+                                    </p>
+                                    <h1>Grade 7</h1>
+                                    <img src="../Gallery/PSHS/mathOlympiad.jpg">
+                                    <figcaption>An Image of the School's Representatives for the 2017 Math Olympiad</figcaption>
+                                    <img src="../Gallery/PSHS/starGazing.jpg">
+                                    <figcaption>An Image of the School's Star Gazing Overnight at UP National Institute for Science and Mathematics Education Development</figcaption>
+                                    <h1>Grade 9</h1>
+                                    <img src="../Gallery/PSHS/transformer_2.jpg">
+                                    <figcaption>An Image of JM's First Power Supply Prototype</figcaption>
+                                    <img src="../Gallery/PSHS/transformer_1.jpg">
+                                    <figcaption>An Image of JM's First Power Supply Prototype</figcaption>
+                                    <video autoplay loop muted>
+                                        <source src="../Gallery/PSHS/powerSupply.mp4" type="video/mp4"/>
+                                        Your browser does not support the video
+                                    </video>
+                                    <figcaption>A Video of Testing the Soldered Power Supply</figcaption>
+                                    <h1>Grade 12</h1>
+                                    <img src="../Gallery/PSHS/robot_1.jpg">
+                                    <figcaption>An Image of Battery Voltage Testing for the Robot</figcaption>
+                                    <img src="../Gallery/PSHS/robot_2.jpg">
+                                    <figcaption>An Image of the Vacuum Prototype</figcaption>
+                                    <img src="../Gallery/PSHS/robot_3.jpg">
+                                    <figcaption>An Image of the Robot Vacuum Prototype</figcaption>
+                                </div>
+                                <div class="achievements">
+                                    <h1>When Learning was Indeed the Best Experience</h1>
+                                    <p></p>
+                                    <img src="../Gallery/PSHS/trophy_1.jpg">
+                                    <figcaption>An Image of the Volleyball Championship Trophy</figcaption>
+                                    <img src="../Gallery/PSHS/medals_2.jpg">
+                                    <figcaption>An Image of all the Recognition Medals</figcaption>
+                                    <img src="../Gallery/PSHS/shsDiploma.jpg">
+                                    <figcaption>An Image of the Senior High School Diploma</figcaption>
+                                    <img src="../Gallery/PSHS/jhsDiploma.jpg">
+                                    <figcaption>An Image of the Junior High School Diploma</figcaption>
+                                    <img src="../Gallery/PSHS/f4.jpg">
+                                    <figcaption>An Image Together with the School's F4</figcaption>
+                                </div>
+                                <div class="misc">
+                                    <h1>The Cure</h1>
+                                    <p>
+                                        Not only did 2 years of JM's education being amidst the pandemic where Parañaque Science High School 
+                                        stepped in to continue providing quality education but also managed to teach JM several things in life
+                                        particularly towards empathy and love for seeking knowledge. In contrast with the JM before he entered
+                                        this school, he departed as someone who is highly-driven by his need to prove himself after realizing
+                                        that he lived a sedative academic lifestyle in one of the most competitive yet comfortable learning atmosphere.
+                                        And with that, he is on his journey to fulfill what he always wanted through learning how to build it.
+                                    </p>
+                                    <img src="../Gallery/PSHS/id_1.jpg">
+                                    <img src="../Gallery/PSHS/id_2.jpg">
+                                    <img src="../Gallery/PSHS/id_3.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="plmInfo" class="schoolInfo">
+                            <div class="headerInfo">
+                                <div class="about infoToggle" onclick="toggleActive2(this)">
+                                    <h1>ABOUT</h1>
+                                </div>
+                                <div class="TIMELINE infoToggle" onclick="toggleActive2(this)">
+                                    <h1>TIMELINE</h1>
+                                </div>
+                                <div class="achievements infoToggle" onclick="toggleActive2(this)">
+                                    <h1>ACHIEVEMENTS</h1>
+                                </div>
+                                <div class="misc infoToggle" onclick="toggleActive2(this)">
+                                    <h1>REMARKS</h1>
+                                </div>
+                            </div>
+                            <div class="contentInfo">
+                                <div class="about">
+                                    <h1>PLM</h1>
+                                </div>
+                                <div class="TIMELINE">
+                                    <h1>2023-Present</h1>
+                                </div>
+                                <div class="achievements">
+                                    <h1>Wala pa</h1>
+                                </div>
+                                <div class="misc">
+                                    <h1>marami nang binagsak</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
-            <section class="container">
-                <div id="parallaxDivider">Parallax divider here</div>
-            </section>
             <section class="container">
                 <div id="bg3">
                     experiences here
                 </div>
             </section>
-
-            <div class="about">
-                <h1>About Me</h1>
-                <p>This Page is literally already about me but here they are in case you still missed some important details: <br>
+        </main>
+        <footer>
+            <div class="footBar">
+                <div id="contact">
+                    <h1>Contact Me</h1>
                     <a>E-mail: iwagjohnmichael@gmail.com</a> <br>
                     <a>Mobile No.: 0929 838 0044 (Smart)</a> <br>
-                    <p>Connect with me:</p> <br>
-                    <a>insert fb icon that links to personal acc</a>
-                    <a>insert ig icon that links to personal acc</a>
-                    <a>insert linkedin icon that links to personal acc</a>
-                    <a>insert github icon that links to personal acc</a>
-                </p>
-                <a id="learnMore" href="About-Me/lore.html">Learn More</a>
+                </div>
+                <div id="connect">
+                    <h1>Connect With Me</h1>
+                    <a href="https://www.facebook.com/100022140710871/"><img src="/Assets/FBLogo.svg"></a>
+                    <a href="https://www.instagram.com/gem_iwag/"><img src="/Assets/IGLogo.svg"></a>
+                    <a href="https://www.linkedin.com/in/john-michael-iwag-0410a9239"><img src="/Assets/linkedInLogo.svg"></a>
+                    <a href="https://github.com/IJMPLM"><img src="/Assets/githubLogo.svg"></a>
+                </div>
             </div>
-        </main>
+        </footer>
     </body>
     <script type="text/javascript" src="index.js"></script>
 </html>

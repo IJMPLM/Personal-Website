@@ -1,3 +1,6 @@
+body {
+    background-color: black;
+}
 .overlay {
     overflow: hidden;
     position: absolute;
@@ -115,16 +118,44 @@
     margin: 0 13vw 5% 13vw;
 }
 
+
+.education{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #completion {
     display:flex;
     flex-direction: row;
     gap: 3rem;
+    max-width: 100%;
     flex-wrap:nowrap;
     justify-content: center;
 }
 
 #completion div {
     transition: background-color 0.3s ease;
+}
+
+#stas, #pshs, #plm {
+    display: flex;
+    flex-direction: column;
+    padding:2rem;
+
+    flex:1;
+}
+
+#stas img, #pshs img, #plm img{
+    width:100%;
+}
+
+#stas h1, #pshs h1, #plm h1{
+    font-size: 2.5rem;
+    font-family: 'Sunflower', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    margin:1rem;
 }
 
 .schoolToggle:hover {
@@ -136,7 +167,7 @@
     outline: 0.2rem solid rgb(194,176,248);
     border-radius: 3px;
     position:relative;
-}
+} 
 
 .schoolToggle.active::before {
     content: '';
@@ -159,25 +190,88 @@
     }
 }
 
-#stas, #pshs, #plm {
-    display: flex;
-    flex-direction: column;
-    width:22rem;
-    height:28rem;
-    padding:2rem;
+#infos{
+    max-width: 100%;
 }
 
-#stas img, #pshs img, #plm img{
+.schoolInfo {
+    display:flex;
+    flex-direction: row;
+    color: white;
+
+    width:100%;
+    border: 4px solid rgb(194,176,248);
+    box-sizing: border-box;
+    border-radius: 5px ;
+}
+
+.headerInfo {
+    flex:1;
+
+    display: flex;
+    flex-direction: column;
+
     width:100%;
 }
 
-#stas h1, #pshs h1, #plm h1{
-    font-size: 3rem;
+.headerInfo h1 {
     font-family: 'Sunflower', sans-serif;
-    color: #FFFFFF;
-    text-align: center;
-    margin:1rem;
+    font-size: 2rem;
 }
+
+.contentInfo {
+    flex:4;
+    border: red 1px solid;
+    margin:1%;
+    padding:1%
+}
+
+
+
+.contentInfo h1{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 2rem;
+}
+
+.contentInfo h2{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 1.5rem;
+}
+
+.contentInfo p{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 1.5rem;
+}
+
+.contentInfo img, .contentInfo video{
+    width:70%;
+    margin-left: 15%;
+}
+
+.contentInfo figcaption{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 5%;
+}
+
+.infoToggle{
+    margin:5%;
+    outline:#BEC2F0 2px inset;
+    text-align: center;
+}
+
+.infoToggle:hover{
+    background-color: rgba(217,75,216,0.8);
+    cursor:pointer;
+}
+
+.infoToggle.active {
+    outline: 0.2rem solid rgb(194,176,248);
+    background-color: #d94bd8;
+    border-radius: 3px;
+    position:relative;
+}
+
 
 @media (max-width: 1536px){
     html {
@@ -214,6 +308,33 @@
     .dividerBlack p {
         font-size:1.5rem;
     }
+    #completion {
+        gap:1.5rem;
+    }
+    #stas h1, #pshs h1, #plm h1{
+        font-size: 1rem;
+    }
+    .headerInfo h1{
+        font-size: 1rem;
+    }
+    .contentInfo{
+        flex:3;
+    }
+    .contentInfo h1, .contentInfo h2{
+        font-size: 1.5rem;
+    }
+    .contentInfo p{
+        font-size: 1rem;
+    }
+    .contentInfo figcaption{
+        font-size: 0.8rem;
+    }
+    .footBar h1{
+        font-size: 1.5rem;
+    }
+    #connect img{
+        width:10%;
+    }
 }
 
 @media (max-width: 640px){
@@ -233,6 +354,12 @@
     .dividerBlack p {
         font-size:1rem;
     }
+    .headerInfo h1{
+        font-size: 0.8rem;
+    }
+    #stas h1{
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width: 475px){
@@ -251,5 +378,11 @@
     }
     .dividerBlack p {
         font-size:1rem;
+    }
+    .navBar a {
+        font-size: 1.25rem;
+    }
+    #connect img{
+        width:15%;
     }
 }

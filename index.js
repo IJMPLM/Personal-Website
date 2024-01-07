@@ -45,26 +45,99 @@ function toggleActive(element) {
   updateSchoolInfo();
 }
 
-function toggleContent(element) {
-  element.classList.toggle('active');
-}
-
 function updateSchoolInfo() {
-  const activeDivs = document.querySelectorAll('.schoolToggle.active');
+  const activeDiv = document.querySelector('.schoolToggle.active');
   const schoolInfoElements = document.querySelectorAll('.schoolInfo');
-
+  
   // Reset the visibility of all schoolInfo elements
   schoolInfoElements.forEach(infoElement => {
     infoElement.style.display = 'none';
   });
 
-  // Show the schoolInfo for the active divs
-  activeDivs.forEach(activeDiv => {
-    const schoolInfoElement = activeDiv.querySelector('.schoolInfo');
-    if (schoolInfoElement) {
-      schoolInfoElement.style.display = 'block';
+  switch(activeDiv.id+"Info") {
+    case "stasInfo": {
+      const whatInfo = document.getElementById('stasInfo');
+      whatInfo.style.display = 'flex';
+      console.log("stas");
+      return 'stas';
     }
+    case "pshsInfo": {
+      const whatInfo = document.getElementById('pshsInfo');
+      whatInfo.style.display = 'flex';
+      console.log("pshs");
+      return 'pshs';
+    }
+    case "plmInfo": {
+      const whatInfo = document.getElementById('plmInfo');
+      whatInfo.style.display = 'flex';
+      console.log("plm");
+      return 'plm';
+    }
+  }
+
+  
+}
+
+function toggleActive2(element) {
+  document.querySelectorAll('.infoToggle').forEach(item => {
+      item.classList.remove('active');
   });
 
-  console.log('School info updated successfully');
+  element.classList.add('active');
+
+  toggleContent(element);
 }
+
+function toggleContent(element){
+  var className = element.classList[0];
+
+  // Hide all contentInfo elements
+  var contentInfoElements = document.querySelectorAll('.contentInfo > div');
+  contentInfoElements.forEach(function (contentInfoElement) {
+      contentInfoElement.style.display = 'none';
+  });
+  //specify which school header will be selected
+  var schoolID = '#'+updateSchoolInfo()+'Info';
+  // Display the contentInfo element with the same class as the clicked header
+  var correspondingContent = document.querySelector( schoolID+' .contentInfo > .' + className);
+  
+  console.log(correspondingContent);
+  if (correspondingContent) {
+      correspondingContent.style.display = 'block';
+  }
+}
+
+// function toggleContent(element) {
+//   var schoolId = element.id;
+
+//   // Hide all contentInfo elements
+//   var contentInfoElements = document.querySelectorAll('#' + schoolId + 'Info > div');
+//   contentInfoElements.forEach(function (contentInfoElement) {
+//     contentInfoElement.style.display = 'none';
+//   });
+
+//   // Display the contentInfo element with the same class as the clicked header
+//   var correspondingContent = document.querySelector('#' + schoolId + 'Info > .' + schoolId);
+//   console.log(correspondingContent);
+//   if (correspondingContent) {
+//     correspondingContent.style.display = 'block';
+//   }
+// }
+
+// function toggleContent(element) {
+//   // Find the corresponding contentInfo using the class name
+//   var className = element.id + 'Info';
+
+//   // Hide all contentInfo elements
+//   var contentInfoElements = document.querySelectorAll('.' + className + ' > div');
+//   contentInfoElements.forEach(function (contentInfoElement) {
+//     contentInfoElement.style.display = 'none';
+//   });
+
+//   // Display the contentInfo element with the same class as the clicked header
+//   var correspondingContent = document.querySelector('.' + className + ' > .' + element.id);
+//   console.log(correspondingContent);
+//   if (correspondingContent) {
+//     correspondingContent.style.display = 'block';
+//   }
+// }

@@ -5,19 +5,64 @@ body {
     width:100vw;
 }
 
-.about{
-    display: flex; /* Makes the div a flex container */
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: center; /* Centers the div horizontally */
-    align-items: center; /* Centers the div vertically */
+.navBar{
+    z-index: 3;
+    position: sticky;
+    top:0;
 }
 
-.about h1 {
-    font-family: 'Cinzel Decorative', serif;   
+.navBar nav {
+    background-color: rgba(34, 30, 36, 0.8);
+    padding: 15px;
+    text-align: center;
 }
 
-#learnMore{
-    font-family: serif;
+nav a {
+    font-family: 'Cinzel Decorative', serif;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #d94bd8;
+}
+
+.footBar{
+    display: flex;
+    flex: row;
+
+    width:100%;
+    background-color: rgba(34, 30, 36, 0.8);
+    text-align: center;
+    z-index: 3;
+    position: sticky;
+    bottom:0;
+    padding: 0 0 1% 0;
+    justify-content: center;
+}
+
+.footBar div {
+    flex:1;
+}
+
+.footBar h1{
+    color:#fff;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+}
+
+.footBar a{
+    color:#fff;
+    font-family: 'Sunflower', sans-serif;
+    font-size: 1rem;
+}
+
+#connect img{
+    width: 5%;
+    margin: 0 1%;
 }
 
 #bg1{
@@ -58,7 +103,21 @@ body {
     height:50rem;
 }
 
+/*
+.about{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
 
-  
+.about h1 {
+    font-family: 'Cinzel Decorative', serif;   
+}
+
+#learnMore{
+    font-family: serif;
+}
+*/
 
 
