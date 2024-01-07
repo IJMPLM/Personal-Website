@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function toLore() {
-  window.location.href = '/About-Me/lore.html';
+  window.location.href = 'About-Me/lore.html';
 }
 
 function toggleActive(element) {
