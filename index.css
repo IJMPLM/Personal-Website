@@ -244,6 +244,11 @@ body {
     font-size: 1.5rem;
 }
 
+.contentInfo li {
+    font-family: 'Sunflower', sans-serif;
+    font-size: 1.5rem;
+}
+
 .contentInfo img, .contentInfo video{
     width:70%;
     margin-left: 15%;
@@ -380,15 +385,9 @@ body {
     .dividerBlack p {
         font-size:1rem;
     }
-    .navBar a {
-        font-size: 1.25rem;
-    }
     #connect img{
         width:15%;
     }
-}
-
-@media (max-width: 390px){
     #completion {
         width: 380px;
     }
@@ -398,7 +397,7 @@ body {
     #stas h1, #pshs h1, #plm h1{
         font-size: 0.7rem   ;
     }
-    .navBar a{
+    nav a{
         font-size: 1rem;
     }
 }
