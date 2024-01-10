@@ -69,6 +69,7 @@ body {
 #description p{    
     font-family: 'Sunflower', sans-serif;
     color: #BEC2F0;
+    text-align: justify;
     text-shadow: 1px 0 0.5px rgb(194,176,248), -1px 0 0.5px rgb(194,176,248), 0 1px 0.5px rgb(194,176,248), 0 -1px 0.5px rgb(194,176,248) ;
     font-size: 1.5rem;
     margin:1rem;
