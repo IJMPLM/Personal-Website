@@ -106,38 +106,3 @@ function toggleContent(element){
       correspondingContent.style.display = 'block';
   }
 }
-
-// function toggleContent(element) {
-//   var schoolId = element.id;
-
-//   // Hide all contentInfo elements
-//   var contentInfoElements = document.querySelectorAll('#' + schoolId + 'Info > div');
-//   contentInfoElements.forEach(function (contentInfoElement) {
-//     contentInfoElement.style.display = 'none';
-//   });
-
-//   // Display the contentInfo element with the same class as the clicked header
-//   var correspondingContent = document.querySelector('#' + schoolId + 'Info > .' + schoolId);
-//   console.log(correspondingContent);
-//   if (correspondingContent) {
-//     correspondingContent.style.display = 'block';
-//   }
-// }
-
-// function toggleContent(element) {
-//   // Find the corresponding contentInfo using the class name
-//   var className = element.id + 'Info';
-
-//   // Hide all contentInfo elements
-//   var contentInfoElements = document.querySelectorAll('.' + className + ' > div');
-//   contentInfoElements.forEach(function (contentInfoElement) {
-//     contentInfoElement.style.display = 'none';
-//   });
-
-//   // Display the contentInfo element with the same class as the clicked header
-//   var correspondingContent = document.querySelector('.' + className + ' > .' + element.id);
-//   console.log(correspondingContent);
-//   if (correspondingContent) {
-//     correspondingContent.style.display = 'block';
-//   }
-// }

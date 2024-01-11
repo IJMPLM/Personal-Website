@@ -86,38 +86,11 @@ nav a:hover {
     background-color: black;
 }
 
-
-/* #bg2{
-    background: linear-gradient(0deg, rgb(34, 30, 36), #349dcd77), url("Assets/VerticalNeonInverted.svg");
-    background-size: cover;
-    background-attachment: fixed; 
-    background-position: center;
-
-    z-index: 0;
-    padding: 10rem 5vh 5vh 5vh;
-} reserved effect*/
-
 #bg4{
     background-color: black;
     z-index: 2;
     height:50rem;
 }
 
-/*
-.about{
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.about h1 {
-    font-family: 'Cinzel Decorative', serif;   
-}
-
-#learnMore{
-    font-family: serif;
-}
-*/
 
 
