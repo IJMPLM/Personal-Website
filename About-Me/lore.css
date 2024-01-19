@@ -235,4 +235,7 @@ body{
     #map {
         width: 95%;
     }
+    #connect img{
+        width:15%;
+    }
 }
